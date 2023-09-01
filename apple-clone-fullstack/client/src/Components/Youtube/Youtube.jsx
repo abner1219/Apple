@@ -12,7 +12,15 @@ const Youtube = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key=AIzaSyC30UJw2bjSxOJZKncK26rGTCBzaM6aVFg&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=6`);
+      const response = await axios.get(`https://www.googleapis.com/youtube/v3/search?key= AIzaSyBWBAJ3M4UO4AElqjxnCvTyNOUaA9C8s7g&channelId=UCE_M8A5yxnLfW0KghEeajjw&part=snippet,id&order=date&maxResults=6`);
+
+//      (AIzaSyBWBAJ3M4UO4AElqjxnCvTyNOUaA9C8s7g&channelId)
+//      (AIzaSyC30UJw2bjSxOJZKncK26rGTCBzaM6aVFg&channelId) 
+//  https://commentpicker.com/youtube-channel-id.php 
+// https://reactrouter.com/en/main/start/tutorial ')
+
+
+
       setVideos(response.data.items); // Extract the 'items' array and set it as the state.
     } catch (error) {
       console.error(error);
